@@ -1,0 +1,555 @@
+.go{
+
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	z-index: 101;
+}
+
+.goin{
+	position: fixed;
+	bottom: 30px;
+	right: 35px;
+	z-index: 101;
+	animation:sofa 0.4s linear infinite alternate;
+}
+
+.content{
+	width: 900px;
+	height: 600px;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -450px;
+
+}
+
+.screen1{
+	background: url("../images/01-bg.png") no-repeat bottom center;
+} 
+
+.screen1 .good{
+	text-align: center;
+	margin-top: 230px;
+}
+
+.screen1 .sofa{
+	position: absolute;
+	top: 180px;
+	left: 220px;
+	animation:sofa 2s linear infinite alternate;
+}
+
+.screen1 .fly{
+	position: absolute;
+	top: 10px;
+	right: -50px; 
+	animation: sofa .8s linear infinite alternate;
+}
+
+@keyframes sofa{
+	from{
+		transform: translateY(15px);
+	}
+	to{
+		transform:translateY(-15px);
+	}
+}
+
+.screen2{
+	background: url("../images/02-bg.png") bottom center no-repeat;
+}
+
+.screen2 .text{
+	text-align: center;
+	margin-top: 30px;
+}
+.screen2 .text img:first-child{
+	position: absolute;
+}
+.screen2 .text img:last-child{
+	
+	opacity: 0;
+}
+.screen2.now .text img:last-child{
+	opacity: 1;
+	transition: opacity 1s;
+}
+.screen2.now .text img:first-child{
+	position: absolute;
+	opacity: 0;
+} 
+
+.input{
+	position: absolute;
+	top: 120px;
+	right: 170px;
+	opacity: 0;
+}
+.key{
+	position: absolute;
+	top: 4px;
+	right: 60px;
+}
+.screen2.now .input{
+	animation:x 1s linear forwards;  
+}
+
+@keyframes x{
+	0%{
+		opacity: 1;
+		transform: translate(1000px,130px);
+	}
+	33.3%{
+		transform: translate(-180px,130px);
+	}
+	66.9%{
+		transform: translate(-180px,130px);
+	}
+	100%{
+		opacity: 1;
+		transform-origin: right top;
+		transform: scale(0.7);
+	}
+} 
+.goods{
+	text-align: center;
+	margin-top: 115px;
+	transform-origin: bottom right;
+	transform: scale(0);
+}
+.screen2.now .goods{
+	transition: transform 1s linear 1s;
+	transform: scale(1);
+}
+.screen2 .sofa{
+ 	opacity: 0; 
+	transform: scale(0.5);
+	position: absolute;
+	top: 140px;
+	left: 290px;
+	z-index: 101;
+}
+.screen2.leaved .sofa{	
+	animation:y 1s linear;
+}
+@keyframes y{
+	from{
+		opacity: 1;	
+	}
+	to{
+		opacity: 1;	
+		transform: translate(-76px,700px);
+	}
+}
+.screen3{
+	background: url("../images/03-bg.png") no-repeat bottom center;
+}
+
+.sofa2{
+	opacity: 0;
+	position: absolute;
+	top: 220px;
+	left: 220px;
+}
+.screen3.now .sofa2{
+	opacity: 1;
+} 
+.change{
+	position: absolute;
+	bottom: 165px;
+	right: 115px;
+}
+.change img:last-child{
+	position: absolute; 
+	opacity: 0;  
+}
+.change img:first-child{
+/* position: absolute; */
+}
+
+ .screen3.now .change img:last-child{
+	position: static;
+	transition: opacity 1s;
+	opacity: 1;
+}
+
+.screen3.now .change img:first-child{
+	position: absolute;
+	opacity: 0;
+}  
+.screen3 .cart{
+	position: absolute;
+	bottom: 100px;
+	right: 190px;
+}
+
+.screen3 .cart img:last-child{
+	position: absolute;
+	opacity: 0;
+}
+.screen3.now .cart img:last-child{
+	transition: opacity 1s;
+    position: static; 
+	opacity: 1;
+}
+.screen3.now .cart img:first-child{
+	position: absolute;
+	opacity: 0;
+}
+.screen3.leaved .sofa2{
+	z-index: 100;
+	animation:m 1s linear;
+}
+@keyframes m{
+	from{
+		transform: rotate(20deg);
+	}
+	to{
+		transform:rotate(20deg) translate(370px,500px);
+	}
+}
+.screen4 .cart{
+	position: relative;
+	z-index: 102;
+	text-align: center;
+	margin-top: 200px;
+}
+.screen4.now .cart{
+	transition: transform 3s linear;
+	transform:translateX(1000px);	
+}
+.screen4 .sofa4{
+	opacity: 0;
+	position: absolute;
+	top: 200px;
+	left: 400px;
+}
+.screen4.now .sofa4{
+	/* display: block; */
+	animation:demo 3s linear forwards ;
+}
+@keyframes demo{
+	from{
+		opacity: 1;
+		transform: rotate(-18deg);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(1000px) rotate(-18deg);
+	}
+}
+.screen4{
+	background: url(../images/04-bg.png) no-repeat bottom center;
+}
+.screen4 .cloud{
+	animation:z 20s linear infinite;
+}
+@keyframes z{
+	from{
+		transform: translateX(-1000px);
+	}
+	to{
+		transform: translateX(1000px);
+	}
+}
+.screen4 .text{
+	position: absolute;
+	top: 100px;
+	left: 250px;
+}
+.screen4 .text img:first-child{
+	position: absolute;}
+
+.screen4 .text img:last-child{
+	display: none;}
+
+.address{
+	display: none;
+	position: relative;
+	text-align: center;
+	margin-top: -400px;
+}
+.address .add2{
+	display: none;
+	position: absolute;
+	top: 50px;
+	left:350px;
+}
+.screen5{
+	background: url("../images/05-bg.png");
+}
+.screen5 .content{
+	background-color: rgba(0,0,0,0.2);
+	height: 100%;
+}
+.text5{
+	position: relative;
+	margin-top: 20px;
+}
+.mouse{
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+	height: 100%;
+	width: 400px;
+}
+.mouse .m1,.m2{
+	position: absolute;
+	top: -430px;
+	right: 0;
+
+}
+.mouse img:first-child{
+	position: absolute;
+	
+}
+.screen5.now .mouse img:first-child{
+	transition: opacity 1s linear 1s;
+	opacity: 0;
+}
+.screen5.now .mouse img:last-child{
+	transition: opacity 1s linear 1s;
+	opacity: 1;
+}
+.hand{
+	position: absolute;
+	bottom: -375px;
+	right: 50px;
+}
+.screen5.now .hand{
+	transition:all 1s linear;
+	transform: translateY(-370px);
+}
+
+.card{
+	position: relative;
+	margin-top: 100px;
+	z-index: 102;
+}
+.order{
+	position: absolute;
+	top: 180px;
+	left: 100px;
+}
+
+.screen5.now .order{
+	transition: all 1s linear 2s;
+	transform: translateY(-80px);
+}
+
+.sofa5{
+	position: absolute;
+	bottom: 100px;
+	left: 100px;
+	opacity: 0;
+	z-index: 101;
+}
+.screen5.now .sofa5{
+	animation: demo1 2s linear 1s forwards;
+}
+@keyframes demo1{
+	0%{
+		opacity: 1;
+		transform: translateY(-900px);
+	}
+	50%{
+	
+		transform: translateY(-200px);
+	}
+	100%{
+		opacity: 1;
+	}
+} 
+.screen5.leaved .sofa5{
+	animation: w 2s linear;
+		/* transition:transform 10s linear 1s;
+		transform: translateY(400px) scale(0.2);  */
+}
+@keyframes w{
+	from{
+		opacity: 1;
+		transform:scale(1); 
+	}
+	to{
+		opacity: 1;
+		transform: translateY(450px) scale(0.2); 
+	}
+}
+.screen6{
+	background: url(../images/06-bg.png) no-repeat 25% bottom;
+}
+.screen6.now{
+	transition: background 1s linear 2s;
+	background: url(../images/06-bg.png) no-repeat 100% bottom;
+} 
+
+.screen6 .box{
+	z-index: 102;
+	opacity: 0;
+	position: absolute;
+	left: 160px;
+	top: 180px;
+}
+.screen6.now .box{
+	animation:box 2s linear; 
+}
+@keyframes box{
+	0%{
+		opacity: 1;
+		transform:translateX(-500px);
+	}
+	50%{
+		opacity: 1;
+		transform: scale(1);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(300px) scale(0.2);
+	}
+}
+.screen6 .car{
+	z-index: 103;
+	position: absolute;
+	left: 140px;
+	top: 478px;
+}
+.screen6 .text{
+	position: absolute;
+	top: 90px;
+	left: 170px;
+}
+.screen6 .text img:first-child{
+	position: absolute;
+}
+.screen6 .cloud{
+	position: absolute;
+	top: -20px;
+	left: 0;
+}
+.screen6 .cloud img:first-child{
+animation:cloud1 20s linear infinite alternate; 
+}
+.screen6 .cloud img:last-child{
+position: absolute;
+top: 0;
+animation:cloud1 30s linear infinite alternate; 
+}
+@keyframes cloud1{
+	from{
+	}
+	to{
+		transform: translateX(1000px);
+	}
+}
+
+.screen6 .addr img{
+	position: absolute;
+	opacity: 0;
+	top: 440px;
+	left: 300px;
+}
+.screen6.now .addr img:first-child{
+	transition: opacity 0.25s 2s;
+	opacity: 1;
+}
+.screen6.now .addr img:last-child{
+	transition: opacity 0.25s linear 2.25s;
+	opacity: 1;
+}
+.screen6 .express{
+	z-index: 104;
+	position: absolute;
+	top: 188px;
+	left: 346px;
+	transform: scale(0);
+	transform-origin: left bottom;
+}
+
+.screen6.now .express{
+	transition: transform 1.2s linear 3s;
+	transform: scale(1);
+}
+
+.screen6 .receive{
+	position: absolute;
+	top: 90px;
+	right: 280px;
+	display: none;
+}
+.screen6 .door{
+	position: absolute;
+	top: 333px;
+	right: 52px;
+	display: none;
+}
+.screen6 .buyer{
+	position: absolute;
+	top: 190px;
+	right: 50px;
+	transform-origin: bottom right;
+	transform: scale(0);
+}
+.screen6 .buyer.show{
+	animation:buy 0.8s linear forwards;
+}
+@keyframes buy{
+	from{
+		transform: scale(1);
+	}
+	to{
+		transform: scale(1) translateX(-150px);
+	}
+}
+.screen7{
+	background: url(../images/07-bg.png) no-repeat bottom center;
+}
+.screen7 .star{
+	position: absolute;
+	left: 155px;
+	top: 138px;
+	
+}
+.screen7 .star img{
+	margin-right: 2px;
+	display: none;
+}
+.screen7 .text img{
+	position: absolute;
+	left: 160px;
+	top: 175px;
+	display: none;
+}
+
+.screen8{
+	background: url(../images/08-bg.png);
+}
+.screen8 .start{
+	text-align: center;
+	margin-top: 10px;
+}
+.screen8 .start img:first-child{
+	position: absolute;
+}
+.screen8 .start:hover img:first-child{
+	opacity: 0;
+}
+.screen8 .start:hover img:last-child{
+	opacity: ;
+}
+.screen8 .again{
+	position: absolute;
+	top: 80px;
+	right: 20px;
+
+}
+.screen8 .finger{
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+}
